@@ -102,13 +102,13 @@ void remove(int toRemove, node* current) {//used to remove nodes from the tree
     int temp = current->getLeft()->getValue();//create a temp variable
     current->setValue(temp);//set current to temp
     delete current->getLeft();//delete the left
-    current->setLeft(NULL);//set the left to null
+    current->setLeft(NULL);//set the left to null    
   }
   else if (toRemove >= current->getValue()) {//otherwise if the number to remove is greater than current
     remove(toRemove, current->getRight());//call remove with the right node
   }
   else if (toRemove < current->getValue()) {//otherwise if the number is less than current
-    remove(toRemove, current->getLeft());//calll remove passing in the left node
+    remove(toRemove, current->getLeft());//call remove passing in the left node
   }
 }
 
